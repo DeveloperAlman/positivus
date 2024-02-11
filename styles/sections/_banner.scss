@@ -1,0 +1,64 @@
+.banner {
+    margin: 140px 0;
+
+    @media screen and (max-width: $mobile-above-481) {
+        margin: 90px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $color-gray;
+        border-radius: $border-radius-large;
+        padding: 60px;
+        padding-right: 0;
+        height: 347px;
+        gap: 20px;
+
+        @media screen and (max-width:$mobile-above-481) {
+            padding: 40px;
+            min-height: 370px;
+        }
+    }
+
+    &__content {}
+
+    &__image {
+        width: 600px;
+
+        @media screen and (max-width:$mobile-above-481) {
+            display: none;
+        }
+    }
+}
+
+.container {}
+
+.content-banner {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    &__heading {
+        @include fluid-text(30, 26)
+    }
+
+    &__text {}
+}
+
+.main-hero {
+
+    &__button {}
+}
+
+.banner-button {
+    width: max-content;
+}
+
+@media screen and (max-width:$mobile-above-481) {
+    .banner-button {
+        width: 100%;
+    }
+}

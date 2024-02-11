@@ -1,0 +1,124 @@
+.contact {
+    margin-top: 140px;
+
+    @media screen and (max-width: $mobile-above-481) {
+        margin-top: 90px;
+    }
+
+    &__body {}
+}
+
+.body-contact {
+    overflow: hidden;
+    position: relative;
+    background: $color-gray;
+    padding: 40px 80px;
+    border-radius: $border-radius-large;
+
+    @media screen and (max-width: $laptop-above-1024) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: $mobile-above-481) {
+        padding: 40px 20px;
+    }
+
+    &__form {
+        max-width: 550px;
+
+        @media screen and (max-width: $tablet-above-769) {
+            max-width: 100%;
+        }
+    }
+
+    &__header {
+        display: flex;
+        gap: 40px;
+
+        @media screen and (max-width: $mobile-above-481) {
+            gap: 0;
+            justify-content: space-around;
+        }
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        justify-content: space-between;
+
+
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    &__input {
+
+        & input,
+        & textarea {
+            padding: 18px 30px;
+            background: white !important;
+            border: 1px solid $color-dark;
+            border-radius: $border-radius-medium;
+        }
+
+        & label {
+            display: block;
+            padding-bottom: 5px;
+            width: 100px;
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        width: 400px;
+
+        @media screen and (max-width: $laptop-above-1024) {
+            width: 300px;
+        }
+
+        @media screen and (max-width: $tablet-above-769) {
+            display: none;
+        }
+    }
+}
+
+.button {}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-button {
+    margin-top: 15px;
+}
+
+input[type=radio] {
+    width: min-content;
+    width: 25px;
+    height: 25px;
+    accent-color: $color-primary;
+    border: 1px solid $color-dark;
+
+    &:focus {
+        border: 1px solid $color-dark;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 190px;
+}

@@ -1,0 +1,129 @@
+.hero {
+    margin-top: 140px;
+
+    @media screen and (max-width:$tablet-above-769) {
+        margin-top: 100px;
+    }
+
+    &__main {}
+
+    &__partners {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 37px;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width:$laptop-1023) {
+            column-gap: 90px;
+            justify-content: flex-start;
+        }
+
+        @media screen and (max-width:$tablet-above-769) {
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width:$mobile-above-481) {
+            display: grid;
+            overflow-x: scroll;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 37px;
+            row-gap: 20px;
+
+            .partner--mobile {
+                margin-left: 37px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+    }
+}
+
+.container {}
+
+.main-hero {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        max-width: 540px;
+
+        @media screen and (max-width: 600px) {
+            display: contents;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+
+        @media screen and (max-width: 600px) {
+            order: -2;
+            margin-bottom: 10px;
+        }
+
+        & span {
+            background: linear-gradient(120deg, $color-primary, #C6FF00);
+            border-radius: $border-radius-small;
+            padding: 0 10px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+
+        & p {
+            @include fluid-text(20, 18);
+        }
+    }
+
+    &__button {}
+
+    &__img {
+        @media screen and (max-width: 600px) {
+            order: -1;
+            margin-bottom: 20px;
+        }
+
+        & img {
+            width: 600px;
+            height: 100%;
+            object-fit: contain;
+
+            @media screen and (max-width:$laptop-above-1024) {
+                width: 400px;
+            }
+
+            @media screen and (max-width:$tablet-above-769) {
+                width: 300px;
+            }
+
+            @media screen and (max-width: $mobile-above-481) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.button {}
+
+.partner {
+
+    &__img {
+        height: 48px;
+        width: auto;
+        filter: grayscale(100);
+    }
+}

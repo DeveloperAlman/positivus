@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    backface-visibility: hidden !important;
+}
+
+html {
+    scroll-behavior: smooth;
+    backface-visibility: hidden !important;
+    overflow-x: hidden !important;
+}
+
+body {
+    @include fluid-text(18, 16);
+    min-height: 100%;
+    backface-visibility: hidden !important;
+    overflow-x: hidden !important;
+    line-height: 1.5;
+    color: $color-dark;
+    background: $color-white;
+    font-family: $font-base;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition: $transition;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+h1 {
+    @include fluid-text(60, 40);
+}
+
+h2 {
+    @include fluid-text(40, 36);
+}
+
+h3 {
+    @include fluid-text(30, 26);
+}
+
+h4 {
+    @include fluid-text(20, 18);
+}
+
+p {
+    @include fluid-text(18, 16);
+}
+
+address {
+    font-style: normal;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    background: none;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-dark;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #939393;
+}

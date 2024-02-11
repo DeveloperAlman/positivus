@@ -1,0 +1,40 @@
+// Colors
+$color-primary:#B9FF66;
+$color-dark:#191A23;
+$color-gray:#f0f0f0;
+$color-white:#fff;
+
+// Border radius
+$border-radius-large:36px;
+$border-radius-medium:18px;
+$border-radius-small:10px;
+
+// Box shadow
+$shadow: 0 5px 0 0 #191A23;
+$shadow--accent: 0 5px 0 0 $color-primary;
+
+// Section paddings
+$section-padding: 70px;
+
+// Transition
+$transition: all 0.36s ease;
+
+// Fonts
+$font-base:"Space Grotesk",
+sans-serif;
+
+// Responsive design
+$desktop-above-1281: 1281px;
+$desktop-1280: 1280px;
+
+$laptop-above-1024: 1024px;
+$laptop-1023: 1023px;
+
+$tablet-above-769: 769px;
+$tablet-768: 768px;
+
+$mobile-above-481: 481px;
+$mobile-XL-480: 480px;
+$mobile-L-420: 420px;
+$mobile-M-375: 375px;
+$mobile-S-320: 320px;

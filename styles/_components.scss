@@ -1,0 +1,31 @@
+// Button
+.button {
+    padding: 20px 36px;
+    @include fluid-text(20, 16);
+    background: $color-dark;
+    color: $color-white;
+    border-radius: $border-radius-medium;
+    transition: $transition;
+    border: 1px solid $color-dark;
+
+    &:is(:hover, &:focus-visible) {
+        background: $color-primary;
+        color: $color-dark;
+    }
+
+    @media screen and (max-width: $laptop-above-1024) {
+        padding: 12px 18px;
+    }
+
+    @media screen and (max-width:$mobile-above-481) {
+        padding: 20px 0;
+        width: 100%;
+    }
+}
+
+.button--transparent {
+    border: 1px solid $color-dark;
+    border-radius: $border-radius-medium;
+    background: transparent;
+    color: $color-dark;
+}

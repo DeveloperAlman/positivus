@@ -1,0 +1,78 @@
+.process {
+    margin-bottom: 140px;
+
+    @media screen and (max-width:$mobile-above-481) {
+        margin-bottom: 90px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+        gap: 40px;
+
+        @media screen and (max-width:$mobile-above-481) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+    }
+}
+
+.process-card {
+    cursor: pointer;
+    padding: 40px 60px;
+    border: 1px solid $color-dark;
+    box-shadow: $shadow;
+    border-radius: $border-radius-large;
+    transition: $transition;
+
+    @media screen and (max-width:$mobile-above-481) {
+        padding: 20px;
+    }
+
+    &:is(:hover, &:focus-visible) {
+        background: $color-primary;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    &__number {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        @include fluid-text(60, 30);
+    }
+
+    &__number-heading {
+        @include fluid-text(30, 16);
+        font-weight: 500;
+
+        @media screen and (max-width:$mobile-above-481) {
+            max-width: 203px;
+        }
+    }
+
+    &__icon {
+        width: 60px;
+        height: 60px;
+
+        @media screen and (max-width:$mobile-above-481) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__body {
+        padding: 40px 0;
+        padding-bottom: 0;
+    }
+
+    &__text {}
+}
+
+.toggle-display-none {
+    display: none;
+}
